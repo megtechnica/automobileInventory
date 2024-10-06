@@ -40,14 +40,6 @@ public class Automobile {
         }
     }
     
-    // list vehicle information
-    public String[] listVehicleInfo() {
-        try {
-            return new String[] { make, model, color, String.valueOf(year), String.valueOf(mileage) };
-        } catch (Exception e) {
-            return new String[] { "An error occurred while listing vehicle information: " + e.getMessage() };
-        }
-    }
     // remove a vehicle
     public String removeVehicle() {
         try {
@@ -61,6 +53,7 @@ public class Automobile {
             return "An error occurred while removing vehicle: " + e.getMessage();
         }
     }
+    
     // update vehicle attributes
     public String updateVehicleAttributes(String make, String model, String color, int year, int mileage) {
         try {
@@ -74,5 +67,16 @@ public class Automobile {
             return "An error occurred updating vehicle: " + e.getMessage();
         }
     }
+    
+    // list vehicle information
+    public String[] listVehicleInfo() {
+        try {
+            return new String[] { make, model, color, String.valueOf(year), String.valueOf(mileage) };
+        } catch (Exception e) {
+            return new String[] { "An error occurred while listing vehicle information: " + e.getMessage() };
+        }
+    }
+
+
 
 }
